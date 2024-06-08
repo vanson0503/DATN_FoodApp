@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Payment Success</title>
+</head>
+<body>
+    <h1>Payment Success</h1>
+    <div id="result"></div>
+    <script>
+        // Function to fetch query parameters from the URL
+        function getQueryParams() {
+            const params = {};
+            window.location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(str, key, value) {
+                params[key] = value;
+            });
+            return params;
+        }
+        const params = getQueryParams();
+
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            document.getElementById('result').innerHTML = `
+                <p>Transaction ID: ${params.id}</p>
+                <p>Paid Amount: ${params.price}</p>
+            `;
+        });
+        fetch('api', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({id: id })  // Send any data required by the server, such as the price
+            })
+            .then(function(response) {
+                return response.json();
+            })
+            .then(function(session) {
+                // Use the session ID to redirect to Stripe's checkout page
+                stripe.redirectToCheckout({ sessionId: session.sessionId });
+            })
+            .catch(function(error) {
+                console.error('Error:', error);
+            });
+    </script>
+</body>
+</html>
