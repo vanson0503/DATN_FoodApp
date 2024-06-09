@@ -63,4 +63,16 @@ class OrderViewModel(private val orderRepository: OrderRepository):ViewModel() {
             }
         }
     }
+
+    fun checkCart(customerId: Int,onResult:(Boolean,String)->Unit){
+        viewModelScope.launch {
+            try {
+                val response = orderRepository.checkCart(customerId)
+                onResult(true,response.message)
+            } catch (e: Exception) {
+                e.printStackTrace()
+                e.message?.let { onResult(false, it) }
+            }
+        }
+    }
 }

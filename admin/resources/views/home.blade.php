@@ -125,7 +125,7 @@
 
     </div>
     <div class="row">
-        <div class="col-lg-8 col-md-4 order-1 h-100">
+        <div class="col-lg-12 col-md-4 order-1 h-100">
             <div class="row">
                 <div class="col-12 mb-4">
                     <div class="card">
@@ -270,17 +270,17 @@
 
 
         <!--/ Total Revenue -->
-        <div class="col-lg-4 col-md-4 order-1 h-100">
-            <div class="row">
-                <div class="col-12 mb-4">
-                    <div class="card">
-                        <div class="card-body align-items-center">
-                            <canvas id="productCategorySalesChart" height="400"></canvas>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <!--<div class="col-lg-4 col-md-4 order-1 h-100">-->
+        <!--    <div class="row">-->
+        <!--        <div class="col-12 mb-4">-->
+        <!--            <div class="card">-->
+        <!--                <div class="card-body align-items-center">-->
+        <!--                    <canvas id="productCategorySalesChart" height="400"></canvas>-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--        </div>-->
+        <!--    </div>-->
+        <!--</div>-->
     </div>
     <div class="row">
         <div class="col-lg-4 col-md-4 order-1">
@@ -404,38 +404,38 @@
                 .catch(error => console.error('Error fetching data:', error));
         });
 
-        document.addEventListener('DOMContentLoaded', function () {
-            const ctx = document.getElementById('productCategorySalesChart').getContext('2d');
+        // document.addEventListener('DOMContentLoaded', function () {
+        //     const ctx = document.getElementById('productCategorySalesChart').getContext('2d');
 
-            // Fetch product category sales data from API
-            fetch(BASE_API_URL + 'stats/category-sales')
-                .then(response => response.json())
-                .then(data => {
-                    const labels = data.map(item => item.name);
-                    const sales = data.map(item => item.quantity_sold);
+        //     // Fetch product category sales data from API
+        //     fetch(BASE_API_URL + 'stats/category-sales')
+        //         .then(response => response.json())
+        //         .then(data => {
+        //             const labels = data.map(item => item.name);
+        //             const sales = data.map(item => item.quantity_sold);
 
-                    const chart = new Chart(ctx, {
-                        type: 'polarArea',
-                        data: {
-                            labels: labels,
-                            datasets: [{
-                                label: 'Số sản phẩm bán theo danh mục',
-                                data: sales,
-                                backgroundColor: [
-                                    'rgba(255, 99, 132, 0.5)',
-                                    'rgba(54, 162, 235, 0.5)',
-                                    'rgba(255, 206, 86, 0.5)',
-                                    'rgba(75, 192, 192, 0.5)',
-                                    'rgba(153, 102, 255, 0.5)',
-                                    'rgba(255, 159, 64, 0.5)'
-                                ],
-                                borderWidth: 1
-                            }]
-                        }
-                    });
-                })
-                .catch(error => console.error('Error fetching data:', error));
-        });
+        //             const chart = new Chart(ctx, {
+        //                 type: 'polarArea',
+        //                 data: {
+        //                     labels: labels,
+        //                     datasets: [{
+        //                         label: 'Số sản phẩm bán theo danh mục',
+        //                         data: sales,
+        //                         backgroundColor: [
+        //                             'rgba(255, 99, 132, 0.5)',
+        //                             'rgba(54, 162, 235, 0.5)',
+        //                             'rgba(255, 206, 86, 0.5)',
+        //                             'rgba(75, 192, 192, 0.5)',
+        //                             'rgba(153, 102, 255, 0.5)',
+        //                             'rgba(255, 159, 64, 0.5)'
+        //                         ],
+        //                         borderWidth: 1
+        //                     }]
+        //                 }
+        //             });
+        //         })
+        //         .catch(error => console.error('Error fetching data:', error));
+        // });
     </script>
 
     @endsection

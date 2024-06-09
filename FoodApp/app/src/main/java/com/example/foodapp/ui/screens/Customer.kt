@@ -717,7 +717,7 @@ fun UpdateProfileScreen(
                                           loading.value = false
                                       }
                                       else{
-                                          Toast.makeText(context, "Cập nhật thất bại", Toast.LENGTH_SHORT).show()
+                                          Toast.makeText(context, "Số điện thoại đã tồn tại", Toast.LENGTH_SHORT).show()
                                           loading.value = false
                                       }
                                   }

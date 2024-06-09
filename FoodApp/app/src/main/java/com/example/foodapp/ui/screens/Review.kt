@@ -61,6 +61,7 @@ import coil.compose.AsyncImage
 import com.example.foodapp.data.api.RetrofitClient
 import com.example.foodapp.data.repository.ReviewRepository
 import com.example.foodapp.model.review.ReviewItem
+import com.example.foodapp.ui.theme.NeonYellow
 import com.example.foodapp.utils.BASE_IMAGE_AVATAR_URL
 import com.example.foodapp.utils.BASE_IMAGE_PRODUCT_URL
 import com.example.foodapp.utils.formatAvgRating
@@ -155,7 +156,7 @@ fun ReviewItem(review: ReviewItem) {
             )
             Text(
                 text = "Đánh giá: ${"★".repeat(review.rate)}${"☆".repeat(5 - review.rate)}",
-                color = Color.Yellow,
+                color = NeonYellow,
                 fontSize = 14.sp
             )
             Text(

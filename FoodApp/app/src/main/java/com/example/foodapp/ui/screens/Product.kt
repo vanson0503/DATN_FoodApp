@@ -191,6 +191,7 @@ fun ItemProduct2(
             .clickable {
                 onProductClick(product.id)
             }
+            .clip(shape = RoundedCornerShape(10.dp))
             .background(Color.White)
     ) {
         Box {
@@ -282,6 +283,7 @@ fun ItemProduct(
             .clickable {
                 onProductClick(product.id)
             }
+            .clip(shape = RoundedCornerShape(10.dp))
             .background(Color.White)
     ) {
         Box {
@@ -410,7 +412,7 @@ fun ProductDetailScreen(
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             CircularProgressIndicator(color = Color.Black)
-            Text("Loading product details...")
+            Text("Đang tải dữ liệu...")
         }
         return
     }
@@ -709,7 +711,7 @@ fun ProductDetailScreen(
                         )
 
                         Text(
-                            text = "Calories: ${product!!.calo} kcal",
+                            text = "Calo: ${product!!.calo} kcal",
                             fontSize = 18.sp,
                             modifier = Modifier.padding(bottom = 8.dp)
                         )
@@ -806,40 +808,6 @@ fun ProductDetailScreen(
 }
 
 
-@Composable
-fun ProductByCategoryScreen(
-    id:Int
-){
-    val context = LocalContext.current
-    val productRepository = remember { ProductRepository(RetrofitClient.productApiService) }
-    val productViewModel: ProductViewModel = remember { ProductViewModel(productRepository) }
-
-    LaunchedEffect(id){
-        productViewModel.getProductsByCategory(id)
-    }
-
-    val productsByCategory by productViewModel.getProductsByCategory.observeAsState()
-
-
-    if (productsByCategory == null) {
-        Column(
-            modifier = Modifier.fillMaxSize(),
-            verticalArrangement = Arrangement.Center,
-            horizontalAlignment = Alignment.CenterHorizontally
-        ) {
-            CircularProgressIndicator(color = Color.Black)
-            Text("Loading product details...")
-        }
-        return
-    }
-
-
-}
-
-
-
-
-
 
 
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
@@ -861,7 +829,7 @@ fun FavoriteProductsScreen(
     if (favoriteProducts == null) {
         Column(modifier = Modifier.fillMaxSize(), verticalArrangement = Arrangement.Center, horizontalAlignment = Alignment.CenterHorizontally) {
             CircularProgressIndicator(color = Color.Black)
-            Text("Loading favorite product...")
+            Text("Đang tải dữ liệu...")
         }
         return
     }

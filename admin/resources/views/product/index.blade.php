@@ -33,7 +33,7 @@
                         <!--<th>Description</th>-->
                         <th>Calo</th>
                         <th>Số lượng</th>
-                        <th>Gia</th>
+                        <th>Giá</th>
                         <!--<th>Ingredient</th>-->
                         <th>Ảnh</th>
                         <th>Hành động</th>
@@ -114,7 +114,7 @@ function displayProducts(products) {
         quantityCell.textContent = product.quantity;
 
         const priceCell = document.createElement('td');
-        priceCell.textContent = product.price;
+        priceCell.textContent = formatVND(product.price);
 
         const imageCell = document.createElement('td');
         const image = document.createElement('img');

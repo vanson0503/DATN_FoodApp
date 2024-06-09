@@ -110,7 +110,7 @@ fun RegisterScreen(
         if (state.isSignInSuccessful) {
             Toast.makeText(
                 context,
-                "Sign in successful ${googleAuthUiClient.getSignedInUser()}",
+                "Đăng nhập thành công",
                 Toast.LENGTH_LONG
             ).show()
             Log.e("TAG", "LoginScreen: ${googleAuthUiClient.getSignedInUser()}", )

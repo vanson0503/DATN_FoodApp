@@ -428,7 +428,7 @@ public function sendResetPasswordRequest(Request $request)
     public function update(Request $request, $id)
     {
         $customer = Customer::findOrFail($id);
-
+    
         // Kiểm tra nếu request có chứa ảnh
         if ($request->hasFile('image')) {
             $file = $request->file('image');
@@ -436,16 +436,26 @@ public function sendResetPasswordRequest(Request $request)
             $file->storeAs('public/avatars', $filename);
             $customer->image_url = $filename;
         }
-
+    
+        // Lấy số điện thoại từ request
+        $phone_number = $request->input('phone_number');
+    
+        // Kiểm tra số điện thoại đã tồn tại chưa
+        $existingCustomer = Customer::where('phone_number', $phone_number)->where('id', '!=', $id)->first();
+        if ($existingCustomer) {
+            return response()->json(['message' => 'Phone number already exists'], 400);
+        }
+    
         // Cập nhật các trường thông tin khác
         $customer->full_name = $request->input('full_name');
-        $customer->phone_number = $request->input('phone_number');
+        $customer->phone_number = $phone_number;
         $customer->email = $request->input('email');
-
+    
         $customer->save();
-
+    
         return response()->json(['message' => 'Customer updated successfully']);
     }
+
     public function updateAvatar(Request $request, $id)
     {
         $customer = Customer::findOrFail($id);

@@ -99,7 +99,7 @@ Route::get('orderdetails/{customerId}', [OrderController::class, 'getCustomerOrd
 Route::post('order', [OrderController::class,'createOrder']);
 Route::get('confirmorder', [OrderController::class,'getInitializationOrders']);
 Route::post('updateorderstatus', [OrderController::class,'updateOrderStatus']);
-Route::get('checkcart', [OrderController::class,'checkCartQuantities']);
+Route::get('checkcart/{id}', [OrderController::class,'checkCartQuantities']);
 
 
 

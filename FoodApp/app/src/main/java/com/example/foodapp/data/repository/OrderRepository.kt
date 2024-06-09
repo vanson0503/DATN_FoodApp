@@ -65,4 +65,14 @@ class OrderRepository(private val orderApiService: OrderApiService) {
             throw Exception(response.message())
         }
     }
+
+    suspend fun checkCart(customerId: Int):ResponseMessage{
+        val response = orderApiService.checkCart(customerId)
+        if (response.isSuccessful && response.body() != null) {
+            return response.body()!!
+        } else {
+            val errorBody = response.errorBody()?.string()
+            throw Exception(parseErrorMessage(errorBody, response.message()))
+        }
+    }
 }

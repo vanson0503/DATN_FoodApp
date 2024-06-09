@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: localhost:3306
--- Thời gian đã tạo: Th6 08, 2024 lúc 11:11 AM
+-- Thời gian đã tạo: Th6 09, 2024 lúc 08:06 PM
 -- Phiên bản máy phục vụ: 5.7.35-cll-lve
 -- Phiên bản PHP: 7.3.33
 
@@ -44,7 +44,7 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`id`, `username`, `password`, `image_url`, `status`, `role`, `created_time`, `updated_time`) VALUES
-(2, 'greichel', '$2y$12$K8Db/lS/yv/j/K.KFH1UJOZ6ZwwqeD45iLjYXzR1sUjChbwhzARNa', '0NBLzGt7R9gcuWyNqaJCHiYQG5C8gPgKRja4W7Fq.jpg', 'active', 'admin', '2024-04-20 05:03:05', '2024-05-31 13:24:15'),
+(2, 'greichel', '$2y$12$K8Db/lS/yv/j/K.KFH1UJOZ6ZwwqeD45iLjYXzR1sUjChbwhzARNa', '0NBLzGt7R9gcuWyNqaJCHiYQG5C8gPgKRja4W7Fq.jpg', 'blocked', 'manager', '2024-04-20 05:03:05', '2024-06-09 00:56:35'),
 (3, 'rnitzsche', '$2y$12$4NqzigdTkmhtNQq.SEDkHO8roxEQ/ZJuwJJyhYP0YEIGUXjwzyo5q', '0NBLzGt7R9gcuWyNqaJCHiYQG5C8gPgKRja4W7Fq.jpg', 'active', 'manager', '2024-04-20 05:03:05', '2024-05-31 13:24:18'),
 (4, 'borer.consuelo', '$2y$12$kxwvXAxEBIIS5OLnRw3CmO0w38y3pX5j5RqQygD7ah.ZG5SKp3S1K', '0NBLzGt7R9gcuWyNqaJCHiYQG5C8gPgKRja4W7Fq.jpg', 'active', 'admin', '2024-04-20 05:03:05', '2024-05-31 13:24:22'),
 (5, 'harvey45', '$2y$12$7eAWVFSAibB3jYd6zs48xeIDNIMjhCNoRtQirsA2UCaP3SWOVlNFO', '0NBLzGt7R9gcuWyNqaJCHiYQG5C8gPgKRja4W7Fq.jpg', 'blocked', 'manager', '2024-04-20 05:03:05', '2024-05-31 13:24:25'),
@@ -54,8 +54,7 @@ INSERT INTO `admin` (`id`, `username`, `password`, `image_url`, `status`, `role`
 (11, 'admin2', '$2y$12$LrQKg410/HRqzq6RaNTkkesbssqG0/0uWT0HESqsfOTVHQCk1tPC.', 'vhEyN7GzXN0es8tN9vsYr4BGVvO44RJBQNPm2aSd.jpg', 'active', 'admin', '2024-05-24 09:47:59', '2024-06-02 09:12:30'),
 (12, 'admin', '$2y$12$z3XfbDuMeNYZXLO0AbetQ.h2q/ekhcxGcl97JaoXmHMwQ9YBwNoai', 'vhEyN7GzXN0es8tN9vsYr4BGVvO44RJBQNPm2aSd.jpg', 'active', 'admin', '2024-05-24 10:19:57', '2024-05-31 13:25:41'),
 (13, 'admin3', '$2y$12$1NwbZNlkUtajNiAa/nc3GuwAohOqhPWZmBroYn.1beIVyEtuvfO8K', 'vhEyN7GzXN0es8tN9vsYr4BGVvO44RJBQNPm2aSd.jpg', 'active', 'admin', '2024-05-26 00:31:23', '2024-05-31 13:25:44'),
-(17, 'sadsad', '$2y$12$3vlCgvb2ZWRqXNlyjpy.SuKGUCsD.BKCcQBpqO9BnBFJdBSNuOe96', '0NBLzGt7R9gcuWyNqaJCHiYQG5C8gPgKRja4W7Fq.jpg	', 'active', 'admin', '2024-06-02 06:10:40', '2024-06-02 10:53:53'),
-(18, 'wwrewrewr', '$2y$12$1MteRD2MveVL6Il.Kf5OEOz9WC4wCVczQc/P0ROyeTkWEBu5GwOLa', '0NBLzGt7R9gcuWyNqaJCHiYQG5C8gPgKRja4W7Fq.jpg	', 'active', 'admin', '2024-06-02 06:13:34', '2024-06-02 10:53:55');
+(17, 'sadsad', '$2y$12$3vlCgvb2ZWRqXNlyjpy.SuKGUCsD.BKCcQBpqO9BnBFJdBSNuOe96', '0NBLzGt7R9gcuWyNqaJCHiYQG5C8gPgKRja4W7Fq.jpg	', 'active', 'admin', '2024-06-02 06:10:40', '2024-06-02 10:53:53');
 
 -- --------------------------------------------------------
 
@@ -76,7 +75,7 @@ INSERT INTO `banner` (`id`, `img_url`) VALUES
 (1, 'https://t4.ftcdn.net/jpg/03/01/76/65/360_F_301766534_Nd0WoLqus2TVilLcRQL6OMACiJeEgnWu.jpg'),
 (2, 'https://cdn.pixabay.com/photo/2023/06/20/17/30/youtube-banner-8077450_1280.jpg'),
 (3, 'https://static.vecteezy.com/system/resources/previews/041/405/401/non_2x/ai-generated-assorted-vegetables-on-wooden-table-free-photo.jpeg'),
-(4, 'https://static.vecteezy.com/system/resources/previews/041/405/395/non_2x/ai-generated-varied-food-selection-on-table-free-photo.jpeg');
+(9, '52T69J0VjvcPn5yReYFsynnBpXz7yU5i6rLBC7tM.png');
 
 -- --------------------------------------------------------
 
@@ -465,12 +464,12 @@ INSERT INTO `customer` (`id`, `full_name`, `phone_number`, `email`, `password`, 
 (98, 'Elenora Bauch', '00957787413', 'ekreiger@example.org', '$2y$12$gp5penX2zCGjW7VvuoiXSe6ojuCatUbUIFgvmpZw5L82PHzHotpva', 'active', 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/User-avatar.svg/2048px-User-avatar.svg.png', NULL, NULL, '2024-04-20 05:03:00', '2024-06-01 08:42:06'),
 (99, 'Nicklaus Cartwright', '03000443955', 'ccollins@example.org', '$2y$12$hxZpQ8kwjKq/WRJT.siNX.f/D/CeLdCetz1czlsMHHH1EVtf25n2O', 'active', 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/User-avatar.svg/2048px-User-avatar.svg.png', NULL, NULL, '2024-04-20 05:03:00', '2024-06-01 08:42:06'),
 (100, 'Ms. Viviane Stanton I', '06997735722', 'ila09@example.net', '$2y$12$DtmLOiSxWEory6lAXd8IZ.CWNupg8nZX2dDuBLdyfogqLGgEFj4zi', 'active', 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/User-avatar.svg/2048px-User-avatar.svg.png', NULL, NULL, '2024-04-20 05:03:00', '2024-06-01 08:42:06'),
-(102, 'Nguyễn Văn Sơn', '0342788463555', 'vanson05032002@gmail.com', NULL, 'active', 'TpxnAR9CN1pLBCHeMKtHhHsGQQEz73tqYGKf1WLb.jpg', 'google', NULL, '2024-05-15 13:17:34', '2024-06-07 05:26:34'),
+(102, 'Nguyễn Văn Sơn', '01234567899', 'vanson050320020@gmail.com', NULL, 'active', 'TpxnAR9CN1pLBCHeMKtHhHsGQQEz73tqYGKf1WLb.jpg', 'google', NULL, '2024-05-15 13:17:34', '2024-06-08 05:48:21'),
 (103, 'ádsad', '3243442433', 'dsfsdf@gmail.com', 'ádasd', 'active', 'https://static.vecteezy.com/system/resources/previews/013/042/571/original/default-avatar-profile-icon-social-media-user-photo-in-flat-style-vector.jpg', NULL, NULL, '2024-05-25 17:11:50', '2024-05-25 17:11:50'),
 (214, 'dasd', '12323123123', 'vanson0503200223@gmail.com', '$2y$12$u9tOVTMmi9XDuTJhhOHvqu/.ZUOysSFOTTCOwo1RK0T3Uhis2CuQq', 'active', 'https://static.vecteezy.com/system/resources/previews/013/042/571/original/default-avatar-profile-icon-social-media-user-photo-in-flat-style-vector.jpg', NULL, NULL, '2024-05-19 09:02:26', '2024-05-19 15:25:36'),
 (215, 'asdasd', '1321231313', 'vanson0503200222@gmail.com', '$2y$12$DtmLOiSxWEory6lAXd8IZ.CWNupg8nZX2dDuBLdyfogqLGgEFj4zi', 'active', 'https://static.vecteezy.com/system/resources/previews/013/042/571/original/default-avatar-profile-icon-social-media-user-photo-in-flat-style-vector.jpg', NULL, '530074', '2024-05-19 09:55:42', '2024-05-19 14:51:34'),
 (217, 'sdasdasdads', '123123123345', 'chiendichhuyenthoai0503@gmail.com', '$2y$12$75XzxRyLK3bOx570yn1ckeET8AGFJusSWAftR7Geu5ZyiPk3Yd4Ay', 'active', 'https://static.vecteezy.com/system/resources/previews/013/042/571/original/default-avatar-profile-icon-social-media-user-photo-in-flat-style-vector.jpg', NULL, NULL, '2024-05-23 10:42:32', '2024-05-23 10:43:03'),
-(218, 'Huy Long Trần', NULL, 'tranhuylong1512@gmail.com', NULL, 'active', 'https://lh3.googleusercontent.com/a/ACg8ocJ0echsXSObUseISbUZQ5WkmuqKlRIAAahJlAN3EyNaek3Jrg=s96-c', 'google', NULL, '2024-05-24 16:23:27', '2024-05-24 16:23:27'),
+(218, 'Huy Long Trần', NULL, 'tranhuylong1512@gmail.com', NULL, 'active', 'tkjTMOrzJiUlYWcCTiA8khLDe4vRanchJIIQIGpj.jpg', 'google', NULL, '2024-05-24 16:23:27', '2024-06-08 17:22:09'),
 (219, 'Nguyen Van Son ABC', '0342788464', 'son0641081@gmail.com', '$2y$12$Cg6eN3KEZcheZXQYOCNUI.651EPxAgn0yTuFUIl2CENuwsKupNIm6', 'active', 'https://static.vecteezy.com/system/resources/previews/013/042/571/original/default-avatar-profile-icon-social-media-user-photo-in-flat-style-vector.jpg', NULL, NULL, '2024-05-25 23:58:34', '2024-06-01 08:44:10'),
 (220, 'Nguyen Van Son ABC', '0342788465', 'son064101@gmail.com', '$2y$12$sznCZccHuHSJkmHvQ6BrweU1Xd/Dq9q0mvsOi0Sb6lpSqnzHt6Q7C', 'active', 'https://static.vecteezy.com/system/resources/previews/013/042/571/original/default-avatar-profile-icon-social-media-user-photo-in-flat-style-vector.jpg', NULL, '131435', '2024-05-26 00:18:42', '2024-06-01 09:59:33'),
 (221, 'Hồng Nghiêm', '0389389891', 'nghiemhong18022002@gmail.com', NULL, 'active', 'https://lh3.googleusercontent.com/a/ACg8ocL0n0E21qHjJ4VEUptI1gDUMxefDr7CloZmtkKQm1ammS1tlAwj=s96-c', 'google', NULL, '2024-05-31 13:38:06', '2024-06-01 09:36:13'),
@@ -479,8 +478,9 @@ INSERT INTO `customer` (`id`, `full_name`, `phone_number`, `email`, `password`, 
 (224, 'dfdsffd', '3243243243', 'dsadsadsadas@fff.cmm', '$2y$12$7CagENiysLsUvowjADozE.r4hIJBcwJT8./7WO/JTsSePlyYCi826', 'inactive', 'https://static.vecteezy.com/system/resources/previews/013/042/571/original/default-avatar-profile-icon-social-media-user-photo-in-flat-style-vector.jpg', NULL, '388478', '2024-06-01 09:44:41', '2024-06-01 09:44:41'),
 (226, 'sdasd', 'dsadasdad', 'dsadd@gmail.com', '$2y$12$7v8h5S672JcZq2GjqAmrRuctTp.q/OwKVWPV905wkXun8tia5l8Da', 'inactive', 'https://static.vecteezy.com/system/resources/previews/013/042/571/original/default-avatar-profile-icon-social-media-user-photo-in-flat-style-vector.jpg', NULL, '827852', '2024-06-02 07:01:00', '2024-06-02 07:01:00'),
 (227, 'dsadsad', '09213213132', 'dsadsadas@dsad.com', '$2y$12$Ug8FKGGK1K43v21oiifU2.qkUA1vritUIbbrSwhdnNFecvHbf8072', 'inactive', 'https://static.vecteezy.com/system/resources/previews/013/042/571/original/default-avatar-profile-icon-social-media-user-photo-in-flat-style-vector.jpg', NULL, '466483', '2024-06-02 07:04:24', '2024-06-02 07:04:24'),
-(228, 'sadsadsa', '0123456789', 'asdadsa@gmail.com', '$2y$12$Qq4J.H.TX4htLU/yvtOjX.LhXHsWuEewDgKJoPQaY2DB2m6iqtoj2', 'inactive', 'https://static.vecteezy.com/system/resources/previews/013/042/571/original/default-avatar-profile-icon-social-media-user-photo-in-flat-style-vector.jpg', NULL, '377663', '2024-06-02 07:08:54', '2024-06-02 07:08:54'),
-(229, 'sadsad', '0123456788', 'dsadsdsad@gmail.com', '$2y$12$6WwcZUwPAuNRLND9bBm9meUKRg0KenO00lRvAJdMYv52IFjeYbBeK', 'inactive', 'https://static.vecteezy.com/system/resources/previews/013/042/571/original/default-avatar-profile-icon-social-media-user-photo-in-flat-style-vector.jpg', NULL, '982847', '2024-06-02 07:10:27', '2024-06-02 07:10:27');
+(228, 'sadsadsa', '0123456789', 'asdadsa@gmail.com', '$2y$12$Qq4J.H.TX4htLU/yvtOjX.LhXHsWuEewDgKJoPQaY2DB2m6iqtoj2', 'active', 'https://static.vecteezy.com/system/resources/previews/013/042/571/original/default-avatar-profile-icon-social-media-user-photo-in-flat-style-vector.jpg', NULL, '377663', '2024-06-02 07:08:54', '2024-06-09 00:57:14'),
+(229, 'sadsad', '0123456788', 'dsadsdsad@gmail.com', '$2y$12$6WwcZUwPAuNRLND9bBm9meUKRg0KenO00lRvAJdMYv52IFjeYbBeK', 'blocked', 'https://static.vecteezy.com/system/resources/previews/013/042/571/original/default-avatar-profile-icon-social-media-user-photo-in-flat-style-vector.jpg', NULL, '982847', '2024-06-02 07:10:27', '2024-06-08 05:18:51'),
+(230, 'Nguyễn Văn Sơn', NULL, 'vanson05032002@gmail.com', NULL, 'active', '5KTAXqBEibUfhU4G6ePAv1tYtkyiww3hpnUe7k3g.jpg', 'google', NULL, '2024-06-08 05:50:50', '2024-06-09 00:51:38');
 
 -- --------------------------------------------------------
 
@@ -522,14 +522,17 @@ INSERT INTO `favorite` (`id`, `customer_id`, `product_id`, `created_time`, `upda
 (8, 218, 68, '2024-05-24 16:31:06', '2024-05-24 16:31:06'),
 (9, 218, 39, '2024-05-24 16:31:43', '2024-05-24 16:31:43'),
 (10, 218, 91, '2024-05-24 16:31:53', '2024-05-24 16:31:53'),
-(11, 102, 2, '2024-05-25 03:02:58', '2024-05-25 03:02:58'),
 (12, 102, 39, '2024-05-25 03:03:06', '2024-05-25 03:03:06'),
 (13, 219, 68, '2024-05-26 00:02:17', '2024-05-26 00:02:17'),
 (14, 219, 76, '2024-05-26 00:02:31', '2024-05-26 00:02:31'),
 (15, 220, 39, '2024-05-26 00:19:41', '2024-05-26 00:19:41'),
 (17, 221, 39, '2024-05-31 13:42:05', '2024-05-31 13:42:05'),
 (18, 102, 68, '2024-06-01 05:26:21', '2024-06-01 05:26:21'),
-(19, 221, 65, '2024-06-01 09:27:51', '2024-06-01 09:27:51');
+(19, 221, 65, '2024-06-01 09:27:51', '2024-06-01 09:27:51'),
+(20, 102, 6, '2024-06-08 05:44:37', '2024-06-08 05:44:37'),
+(22, 230, 39, '2024-06-08 17:13:12', '2024-06-08 17:13:12'),
+(23, 230, 68, '2024-06-08 17:13:22', '2024-06-08 17:13:22'),
+(24, 218, 9, '2024-06-08 17:24:15', '2024-06-08 17:24:15');
 
 -- --------------------------------------------------------
 
@@ -1142,13 +1145,16 @@ INSERT INTO `location` (`id`, `customer_id`, `name`, `phone_number`, `address`, 
 (306, 11, 'ádasdsadsd', '2343244234', 'Bá Hiến - Bình Xuyên - Vĩnh Phúc', 0, '2024-05-05 03:15:45', '2024-05-05 03:15:45'),
 (307, 11, 'ádasdsadsd', '2343244234', 'Bá Hiến - Bình Xuyên - Vĩnh Phúc', 0, '2024-05-05 03:18:30', '2024-05-05 03:18:30'),
 (308, 100, 'ádasdsadsd', '2343244234', 'Bá Hiến - Bình Xuyên - Vĩnh Phúc', 0, '2024-05-05 03:23:04', '2024-05-05 03:23:04'),
-(316, 218, 'ahdjd', '9938484838', 'hduudud', 1, '2024-05-24 16:27:15', '2024-05-24 16:27:15'),
+(316, 218, 'ahdjd', '9938484838', 'hduudud', 1, '2024-05-24 16:27:15', '2024-06-08 17:23:32'),
 (317, 219, 'Nguyen Van Son', '0342788463', 'Ba Hien - Binh Xuyen - Vinh Phuc', 1, '2024-05-26 00:00:42', '2024-05-26 00:00:42'),
 (319, 220, 'Van Son', '01234567890', 'Vinh Phuc', 1, '2024-05-26 00:24:24', '2024-05-26 00:24:24'),
 (320, 221, 'nghiêm hong', '0389389891;', 'abc', 1, '2024-05-31 13:38:54', '2024-05-31 13:38:54'),
 (321, 102, 'dfdsf', '043543545435', 'Gan chua, Bá Hiến, Bình Xuyên, Vĩnh Phúc', 0, '2024-05-31 18:26:54', '2024-06-01 06:03:43'),
-(324, 102, 'addsad', '03499999999', 'dsadsad, An Phú, An Phú, An Giang', 1, '2024-06-01 06:03:43', '2024-06-01 06:03:43'),
-(325, 221, 'jjh', '067555665445', '., Cao Sơn, Bạch Thông, Bắc Kạn', 0, '2024-06-01 09:21:24', '2024-06-01 09:21:24');
+(324, 102, 'addsad', '03499999999', 'dsadsad, An Phú, An Phú, An Giang', 1, '2024-06-01 06:03:43', '2024-06-08 05:46:41'),
+(325, 221, 'jjh', '067555665445', '., Cao Sơn, Bạch Thông, Bắc Kạn', 0, '2024-06-01 09:21:24', '2024-06-01 09:21:24'),
+(327, 230, 'Nguyen van son', '0342788463', 'Gan chua trai Cup, Bá Hiến, Bình Xuyên, Vĩnh Phúc', 0, '2024-06-08 07:00:09', '2024-06-09 00:52:19'),
+(328, 218, 'ựe', '0987654321', 'udđụiie, Tiến Thắng, Lý Nhân, Hà Nam', 0, '2024-06-08 17:23:25', '2024-06-08 17:23:32'),
+(329, 230, 'nguyen van a', '0342788463', 'Trai Cup, Bá Hiến, Bình Xuyên, Vĩnh Phúc', 1, '2024-06-09 00:52:19', '2024-06-09 00:52:19');
 
 -- --------------------------------------------------------
 
@@ -3392,7 +3398,18 @@ INSERT INTO `messages` (`id`, `sender_id`, `receiver_id`, `content`, `sender_typ
 (2227, 2, 102, 'xin chào', 'admin', '2024-06-07 05:17:52', '2024-06-07 05:17:52'),
 (2228, 2, 102, 'bạn cần hỗ trợ gì', 'admin', '2024-06-07 05:20:17', '2024-06-07 05:20:17'),
 (2229, 102, NULL, 'minh muon huy don', 'customer', '2024-06-07 05:21:15', '2024-06-07 05:21:15'),
-(2230, 2, 102, '.', 'admin', '2024-06-07 05:21:31', '2024-06-07 05:21:31');
+(2230, 2, 102, '.', 'admin', '2024-06-07 05:21:31', '2024-06-07 05:21:31'),
+(2231, 102, NULL, 'Hello', 'customer', '2024-06-08 04:49:26', '2024-06-08 04:49:26'),
+(2232, 11, 102, 'da minh can ho tro gi a', 'admin', '2024-06-08 04:49:41', '2024-06-08 04:49:41'),
+(2233, 230, NULL, 'hello', 'customer', '2024-06-08 13:24:17', '2024-06-08 13:24:17'),
+(2234, 2, 230, 'bạn cần hỗ trợ gì ạ', 'admin', '2024-06-08 13:25:12', '2024-06-08 13:25:12'),
+(2235, 218, NULL, '?????', 'customer', '2024-06-08 17:23:46', '2024-06-08 17:23:46'),
+(2236, 2, 218, '2 x ?????????', 'admin', '2024-06-08 17:24:24', '2024-06-08 17:24:24'),
+(2237, 218, NULL, 't bom hàng', 'customer', '2024-06-08 17:24:34', '2024-06-08 17:24:34'),
+(2238, 2, 218, 'đéo cho boom', 'admin', '2024-06-08 17:24:45', '2024-06-08 17:24:45'),
+(2239, 2, 218, 'giỏi vào mà hủy đơn đi', 'admin', '2024-06-08 17:24:53', '2024-06-08 17:24:53'),
+(2240, 230, NULL, 'alo', 'customer', '2024-06-09 00:52:59', '2024-06-09 00:52:59'),
+(2241, 2, 230, 'alo', 'admin', '2024-06-09 00:53:05', '2024-06-09 00:53:05');
 
 -- --------------------------------------------------------
 
@@ -3459,23 +3476,23 @@ INSERT INTO `orders` (`id`, `customer_id`, `name`, `phone_number`, `address`, `n
 (4, 85, 'Mr. Peter Dooley', '646.295.3989', '6656 Monica Hollow Suite 550\nFletcherhaven, NV 46480-6396', 'YOU with us!\"\' \'They were learning to draw,\' the Dormouse shook itself, and was beating her violently with its legs hanging down, but generally, just as she leant against a buttercup to rest her.', 'cash', 'completed', 'completed', '2024-03-09 17:27:53', '2024-05-25 07:30:59'),
 (5, 9, 'Arlie Harber', '1-636-638-7245', '2470 Gwendolyn Lake Suite 376\nNorth Chaya, OH 64775-9688', 'However, when they liked, and left foot, so as to the Mock Turtle sighed deeply, and drew the back of one flapper across his eyes. \'I wasn\'t asleep,\' he said do. Alice looked all round the table.', 'online', 'completed', 'delivering', '2024-03-26 14:18:47', '2024-05-23 02:02:09'),
 (6, 33, 'Emil Kling', '+1-770-890-7967', '178 Ursula Pass\nSouth Goldabury, RI 97402', 'Mock Turtle Soup is made from,\' said the Caterpillar. \'Well, I shan\'t go, at any rate, the Dormouse shook itself, and began picking them up again as quickly as she could. The next witness was the.', 'cash', 'failed', 'completed', '2024-03-29 06:42:45', '2024-05-25 07:30:59'),
-(7, 84, 'Miss Kaitlin Kiehn DVM', '+1 (854) 857-8138', '303 Crist Fort Suite 233\nSimchester, MO 39852', 'MORE than nothing.\' \'Nobody asked YOUR opinion,\' said Alice. The poor little thing sat down at her for a minute or two. \'They couldn\'t have done that?\' she thought. \'I must go back by railway,\' she.', 'cash', 'completed', 'initialization', '2024-03-12 07:07:58', '2024-02-10 13:50:50'),
+(7, 84, 'Miss Kaitlin Kiehn DVM', '+1 (854) 857-8138', '303 Crist Fort Suite 233\nSimchester, MO 39852', 'MORE than nothing.\' \'Nobody asked YOUR opinion,\' said Alice. The poor little thing sat down at her for a minute or two. \'They couldn\'t have done that?\' she thought. \'I must go back by railway,\' she.', 'cash', 'completed', 'confirm', '2024-03-12 07:07:58', '2024-06-08 05:01:16'),
 (8, 91, 'Alfonzo D\'Amore MD', '1-301-931-4878', '2427 Velma Inlet Apt. 394\nLake Reynaborough, DE 06688-2664', 'YOU?\' Which brought them back again to the Queen, and in a voice sometimes choked with sobs, to sing you a song?\' \'Oh, a song, please, if the Queen of Hearts, and I could shut up like a sky-rocket!\'.', 'cash', 'completed', 'completed', '2024-03-23 14:59:46', '2024-05-18 14:37:18'),
 (9, 44, 'Khalil Wintheiser', '501-289-1741', '47997 Emard Parkways Apt. 567\nThaliaburgh, OH 65149-0815', 'Alice very meekly: \'I\'m growing.\' \'You\'ve no right to think,\' said Alice to herself, \'Why, they\'re only a child!\' The Queen turned crimson with fury, and, after glaring at her feet as the Dormouse.', 'cash', 'failed', 'completed', '2024-01-25 16:44:31', '2024-01-03 11:42:43'),
 (10, 63, 'Miss Dasia Lindgren Sr.', '1-941-671-8675', '86656 Petra Mews\nDelilahshire, ND 04444-7117', 'And oh, I wish you would seem to dry me at home! Why, I haven\'t had a VERY unpleasant state of mind, she turned to the other guinea-pig cheered, and was in livery: otherwise, judging by his face.', 'cash', 'completed', 'confirm', '2024-04-16 19:33:47', '2024-05-31 15:49:01'),
 (11, 55, 'Dr. Casey Mosciski', '+1-302-889-6002', '553 Stroman Dale\nSouth Marjoriemouth, NH 09774', 'Hatter, \'I cut some more tea,\' the March Hare,) \'--it was at the March Hare. \'Sixteenth,\' added the Gryphon, \'you first form into a line along the sea-shore--\' \'Two lines!\' cried the Gryphon.', 'cash', 'initialization', 'completed', '2024-03-18 09:31:27', '2024-05-25 07:30:59'),
 (12, 15, 'Isidro Gorczany', '925.851.3002', '764 Grant Heights Apt. 375\nStreichmouth, VA 60952-4054', 'Gryphon, and, taking Alice by the way of speaking to a day-school, too,\' said Alice; \'you needn\'t be so stingy about it, even if I fell off the top of its right ear and left foot, so as to go and.', 'cash', 'failed', 'cancelled', '2024-03-31 15:01:53', '2024-05-25 08:15:38'),
-(13, 63, 'Wade Tremblay', '319-998-3721', '524 Howell Inlet\nNew Sierra, SD 40152-2133', 'The twelve jurors were all writing very busily on slates. \'What are they made of?\' Alice asked in a loud, indignant voice, but she heard one of the country is, you see, so many different sizes in a.', 'cash', 'completed', 'initialization', '2024-02-13 22:11:26', '2024-05-18 14:37:10'),
+(13, 63, 'Wade Tremblay', '319-998-3721', '524 Howell Inlet\nNew Sierra, SD 40152-2133', 'The twelve jurors were all writing very busily on slates. \'What are they made of?\' Alice asked in a loud, indignant voice, but she heard one of the country is, you see, so many different sizes in a.', 'cash', 'completed', 'confirm', '2024-02-13 22:11:26', '2024-06-08 05:01:18'),
 (14, 99, 'Prof. Elisa Oberbrunner Sr.', '+1-804-562-3804', '2856 King Orchard Suite 258\nKochland, WV 31466-0159', 'I had to double themselves up and saying, \'Thank you, sir, for your interesting story,\' but she heard was a most extraordinary noise going on between the executioner, the King, \'that saves a world.', 'online', 'completed', 'completed', '2024-01-11 13:38:27', '2024-05-24 14:05:04'),
 (15, 88, 'Margaretta Heller', '+1 (626) 625-8542', '54384 Cormier Highway Apt. 441\nSouth Caitlynberg, LA 28708-1463', 'Caterpillar and Alice looked at Alice. \'It goes on, you know,\' said Alice, as she had been (Before she had never been in a hoarse, feeble voice: \'I heard every word you fellows were saying.\' \'Tell.', 'online', 'completed', 'cancelled', '2024-03-31 22:03:25', '2024-03-09 16:01:43'),
-(16, 96, 'Geo O\'Keefe', '+17743744732', '974 Zander Gardens\nLake Madison, CA 18773-8000', 'March Hare said to Alice, flinging the baby joined):-- \'Wow! wow! wow!\' While the Duchess by this time.) \'You\'re nothing but a pack of cards: the Knave of Hearts, he stole those tarts, And took them.', 'cash', 'failed', 'initialization', '2024-01-20 20:42:57', '2024-05-25 07:30:59'),
+(16, 96, 'Geo O\'Keefe', '+17743744732', '974 Zander Gardens\nLake Madison, CA 18773-8000', 'March Hare said to Alice, flinging the baby joined):-- \'Wow! wow! wow!\' While the Duchess by this time.) \'You\'re nothing but a pack of cards: the Knave of Hearts, he stole those tarts, And took them.', 'cash', 'failed', 'confirm', '2024-01-20 20:42:57', '2024-06-08 05:01:21'),
 (17, 81, 'Tyrel Beer', '678.908.7746', '871 Parker Locks Suite 855\nPhyllisbury, VT 17652-9399', 'Alice remarked. \'Right, as usual,\' said the Gryphon, and the game was in managing her flamingo: she succeeded in getting its body tucked away, comfortably enough, under her arm, and timidly said.', 'cash', 'initialization', 'completed', '2024-01-01 23:21:47', '2024-05-25 07:30:59'),
 (18, 66, 'Freida Collins', '1-281-518-0219', '18124 Stracke Tunnel Suite 777\nHallieville, MS 21918-3263', 'Now you know.\' \'Who is it directed to?\' said the Pigeon. \'I can tell you my adventures--beginning from this morning,\' said Alice doubtfully: \'it means--to--make--anything--prettier.\' \'Well, then,\'.', 'online', 'initialization', 'completed', '2024-03-29 10:18:36', '2024-02-23 17:46:44'),
 (19, 76, 'Gordon Witting', '667-222-5657', '8391 Mayert Flat\nPort Anahi, OR 29907-5154', 'Gryphon whispered in a hot tureen! Who for such dainties would not stoop? Soup of the jurymen. \'It isn\'t mine,\' said the last time she saw them, they set to work very carefully, remarking, \'I really.', 'online', 'failed', 'refund', '2024-02-13 18:23:19', '2024-05-19 15:43:01'),
 (20, 50, 'Miss Josefina Weissnat IV', '423.213.3542', '7418 Pacocha Terrace Apt. 364\nWest Maud, LA 59363-6748', 'I do,\' said the Queen. \'Well, I never knew whether it was growing, and growing, and growing, and she tried to look for her, and she put one arm out of the Mock Turtle in a VERY turn-up nose, much.', 'cash', 'failed', 'confirm', '2024-03-26 00:49:12', '2024-05-31 15:49:04'),
 (21, 73, 'Mrs. Hildegard Herzog MD', '+15409273543', '2960 Ludie Ports Suite 247\nPort Seth, SD 83046', 'Alice\'s first thought was that it was too small, but at the White Rabbit. She was walking hand in hand with Dinah, and saying \"Come up again, dear!\" I shall be a person of authority over Alice.', 'cash', 'completed', 'cancelled', '2024-03-04 10:28:56', '2024-05-25 07:30:59'),
-(22, 100, 'Mr. Marco Johnson III', '352-313-9357', '22174 Jerry Lock\nReichertfurt, RI 69065-4965', 'Alice dear!\' said her sister; \'Why, what a Gryphon is, look at a king,\' said Alice. \'Then it ought to eat or drink anything; so I\'ll just see what I get\" is the use of a muchness\"--did you ever saw.', 'cash', 'completed', 'initialization', '2024-02-09 17:15:11', '2024-01-21 23:31:34'),
-(23, 81, 'Mrs. Adah Brekke I', '1-803-673-1146', '57893 Aracely Turnpike\nDavishaven, OR 61822-8628', 'I know!\' exclaimed Alice, who felt very lonely and low-spirited. In a minute or two, she made out what she was now more than nine feet high. \'I wish I had our Dinah here, I know all sorts of.', 'cash', 'initialization', 'initialization', '2024-02-19 17:22:33', '2024-04-27 15:22:48'),
+(22, 100, 'Mr. Marco Johnson III', '352-313-9357', '22174 Jerry Lock\nReichertfurt, RI 69065-4965', 'Alice dear!\' said her sister; \'Why, what a Gryphon is, look at a king,\' said Alice. \'Then it ought to eat or drink anything; so I\'ll just see what I get\" is the use of a muchness\"--did you ever saw.', 'cash', 'completed', 'confirm', '2024-02-09 17:15:11', '2024-06-08 05:01:19'),
+(23, 81, 'Mrs. Adah Brekke I', '1-803-673-1146', '57893 Aracely Turnpike\nDavishaven, OR 61822-8628', 'I know!\' exclaimed Alice, who felt very lonely and low-spirited. In a minute or two, she made out what she was now more than nine feet high. \'I wish I had our Dinah here, I know all sorts of.', 'cash', 'initialization', 'confirm', '2024-02-19 17:22:33', '2024-06-08 05:01:17'),
 (24, 100, 'Mr. Jan Bode', '(920) 302-2085', '56529 Tad Burgs\nSouth Howard, UT 66606', 'Cheshire Cat, she was beginning very angrily, but the Hatter went on, \'that they\'d let Dinah stop in the world she was saying, and the White Rabbit as he spoke, and added \'It isn\'t a letter, after.', 'cash', 'completed', 'delivering', '2024-03-23 08:21:32', '2024-05-31 15:48:07'),
 (25, 6, 'Prof. Rollin Beahan II', '863.630.5955', '861 Fabiola Plains Suite 624\nAlysonchester, DE 48983', 'Alice called out \'The Queen! The Queen!\' and the little passage: and THEN--she found herself falling down a very difficult game indeed. The players all played at once in her haste, she had nibbled.', 'online', 'initialization', 'completed', '2024-01-13 15:35:58', '2024-02-17 10:33:18'),
 (26, 84, 'Gaylord Boehm', '+1-678-978-4098', '255 Michelle Lake Apt. 043\nLake Glen, DE 14072', 'First, she dreamed of little birds and beasts, as well as she had put on his slate with one eye; \'I seem to come out among the party. Some of the house!\' (Which was very hot, she kept on good terms.', 'online', 'completed', 'cancelled', '2024-03-29 08:39:35', '2024-03-29 16:26:01'),
@@ -3483,17 +3500,17 @@ INSERT INTO `orders` (`id`, `customer_id`, `name`, `phone_number`, `address`, `n
 (28, 56, 'Trace Kilback', '(480) 700-7352', '9924 Dicki Extension\nNew Ravenville, NC 78845-8210', 'Mouse to Alice as it was certainly English. \'I don\'t know what to beautify is, I can\'t quite follow it as you say things are \"much of a large flower-pot that stood near the house down!\' said the.', 'cash', 'completed', 'cancelled', '2024-02-13 18:21:12', '2024-05-25 07:30:59'),
 (29, 12, 'Melvin Nitzsche DDS', '657-954-2504', '368 Nienow Forges\nDudleyfurt, WY 19026-4337', 'Lizard, Bill, was in livery: otherwise, judging by his garden.\"\' Alice did not seem to dry me at all.\' \'In that case,\' said the Dormouse began in a sorrowful tone; \'at least there\'s no use in saying.', 'cash', 'completed', 'confirm', '2024-04-09 18:28:44', '2024-05-31 15:49:03'),
 (30, 74, 'Desiree Hodkiewicz', '(971) 322-3687', '9044 Crystel Rest\nTerryburgh, FL 76376', 'ARE a simpleton.\' Alice did not quite sure whether it was getting so thin--and the twinkling of the trees had a pencil that squeaked. This of course, Alice could only hear whispers now and then, and.', 'online', 'failed', 'completed', '2024-04-10 12:15:06', '2024-03-27 06:25:54'),
-(31, 3, 'Louvenia Schinner', '512-406-8544', '35867 Ayana Meadows Suite 287\nDaughertybury, ID 99009', 'Pigeon. \'I can see you\'re trying to find that she did it so VERY tired of being upset, and their curls got entangled together. Alice laughed so much surprised, that for two reasons. First, because.', 'cash', 'initialization', 'initialization', '2024-02-10 10:11:28', '2024-05-25 07:30:59'),
+(31, 3, 'Louvenia Schinner', '512-406-8544', '35867 Ayana Meadows Suite 287\nDaughertybury, ID 99009', 'Pigeon. \'I can see you\'re trying to find that she did it so VERY tired of being upset, and their curls got entangled together. Alice laughed so much surprised, that for two reasons. First, because.', 'cash', 'initialization', 'confirm', '2024-02-10 10:11:28', '2024-06-08 05:01:18'),
 (32, 30, 'Clinton Hermann', '912-854-5300', '5194 Avis Falls Apt. 473\nSouth Franz, AL 75480', 'Who for such dainties would not join the dance. \'\"What matters it how far we go?\" his scaly friend replied. \"There is another shore, you know, upon the other side of the miserable Mock Turtle.', 'cash', 'completed', 'cancelled', '2024-01-20 10:18:20', '2024-01-14 06:20:24'),
-(33, 50, 'Christiana Lakin', '+1.838.741.2918', '12485 Oliver Port Suite 851\nHamillburgh, VA 88176', 'We must have been was not easy to know when the tide rises and sharks are around, His voice has a timid voice at her feet as the other.\' As soon as she went on to her great delight it fitted! Alice.', 'cash', 'completed', 'initialization', '2024-01-28 21:18:52', '2024-05-24 08:32:54'),
-(34, 28, 'Prof. Elroy Barrows Sr.', '906-824-9479', '2401 Ernser Street Apt. 165\nEast Luther, ND 49443', 'I sleep\" is the use of a procession,\' thought she, \'if people had all to lie down upon their faces. There was no label this time with great emphasis, looking hard at Alice for some time with one.', 'cash', 'failed', 'initialization', '2024-01-27 05:00:12', '2024-02-19 02:01:00'),
+(33, 50, 'Christiana Lakin', '+1.838.741.2918', '12485 Oliver Port Suite 851\nHamillburgh, VA 88176', 'We must have been was not easy to know when the tide rises and sharks are around, His voice has a timid voice at her feet as the other.\' As soon as she went on to her great delight it fitted! Alice.', 'cash', 'completed', 'confirm', '2024-01-28 21:18:52', '2024-06-08 05:01:20'),
+(34, 28, 'Prof. Elroy Barrows Sr.', '906-824-9479', '2401 Ernser Street Apt. 165\nEast Luther, ND 49443', 'I sleep\" is the use of a procession,\' thought she, \'if people had all to lie down upon their faces. There was no label this time with great emphasis, looking hard at Alice for some time with one.', 'cash', 'failed', 'confirm', '2024-01-27 05:00:12', '2024-06-08 05:01:21'),
 (35, 47, 'Marion Runolfsson', '+1-678-558-3525', '726 Howell Freeway Suite 346\nElmoside, CO 92131', 'This question the Dodo solemnly, rising to its children, \'Come away, my dears! It\'s high time to hear it say, as it spoke. \'As wet as ever,\' said Alice sadly. \'Hand it over a little faster?\" said a.', 'cash', 'failed', 'cancelled', '2024-01-25 21:27:14', '2024-05-25 07:30:59'),
 (36, 75, 'Dennis Emard IV', '516.941.5850', '645 Marco Fall Apt. 547\nErynview, MN 29820-0334', 'King added in an undertone, \'important--unimportant--unimportant--important--\' as if she had brought herself down to her in a ring, and begged the Mouse in the pool rippling to the confused clamour.', 'cash', 'completed', 'completed', '2024-04-18 02:02:15', '2024-02-21 04:37:43'),
 (37, 7, 'Tyreek Kub', '+1-223-744-2204', '165 Erling Ville\nPort Gina, AL 95135-6908', 'Alice. \'I\'m a--I\'m a--\' \'Well! WHAT are you?\' And then a voice outside, and stopped to listen. The Fish-Footman began by producing from under his arm a great crash, as if a fish came to the part.', 'cash', 'failed', 'cancelled', '2024-04-14 04:46:13', '2024-05-25 07:30:59'),
 (38, 1, 'Jonathon Jaskolski', '+1-629-516-3564', '7572 King Court Suite 659\nBernhardport, ID 77986-9533', 'Gryphon went on. \'I do,\' Alice hastily replied; \'only one doesn\'t like changing so often, you know.\' \'Not the same thing as \"I eat what I could say if I know all the jurymen on to himself in an.', 'online', 'completed', 'delivering', '2024-03-13 21:54:53', '2024-05-24 08:32:54'),
 (39, 46, 'Maia Ruecker', '+1-509-905-7466', '399 Kshlerin Views Suite 041\nWest Kaya, DE 54833-1760', 'Alice went on muttering over the jury-box with the bones and the sounds will take care of themselves.\"\' \'How fond she is only a mouse that had made out that it was YOUR table,\' said Alice; not that.', 'online', 'completed', 'cancelled', '2024-03-17 03:01:17', '2024-03-21 07:46:15'),
 (40, 77, 'Dr. Glennie Pfannerstill Jr.', '1-518-835-0636', '842 Marks Plain Suite 696\nMaggioport, ME 27763', 'Alice! when she first saw the Mock Turtle with a sigh. \'I only took the cauldron of soup off the mushroom, and her eyes anxiously fixed on it, (\'which certainly was not much like keeping so close to.', 'online', 'completed', 'completed', '2024-01-22 16:25:17', '2024-02-24 08:59:32'),
-(41, 51, 'Lilly Schaefer', '+1-918-572-0426', '9242 Ayden Cape\nSouth Wilhelm, PA 07430', 'Queen. \'You make me smaller, I suppose.\' So she set to partners--\' \'--change lobsters, and retire in same order,\' continued the Pigeon, but in a soothing tone: \'don\'t be angry about it. And yet you.', 'cash', 'failed', 'initialization', '2024-03-20 15:47:35', '2024-05-24 08:31:05'),
+(41, 51, 'Lilly Schaefer', '+1-918-572-0426', '9242 Ayden Cape\nSouth Wilhelm, PA 07430', 'Queen. \'You make me smaller, I suppose.\' So she set to partners--\' \'--change lobsters, and retire in same order,\' continued the Pigeon, but in a soothing tone: \'don\'t be angry about it. And yet you.', 'cash', 'failed', 'confirm', '2024-03-20 15:47:35', '2024-06-08 05:01:15'),
 (42, 71, 'Alycia Berge', '(947) 242-1348', '12951 Kris Dale\nPort Burdettefort, WY 31374', 'I say,\' the Mock Turtle, who looked at the stick, and made a dreadfully ugly child: but it was only the pepper that makes the matter on, What would become of me?\' Luckily for Alice, the little dears.', 'cash', 'completed', 'completed', '2024-03-14 15:19:43', '2024-01-03 21:45:50'),
 (43, 56, 'Curtis Kutch', '1-509-807-7653', '169 Antonia Expressway\nKamronton, MN 67550', 'Mock Turtle at last, more calmly, though still sobbing a little hot tea upon its nose. The Dormouse had closed its eyes again, to see the Hatter continued, \'in this way:-- \"Up above the world go.', 'online', 'failed', 'cancelled', '2024-04-27 06:22:53', '2024-01-26 08:37:03'),
 (44, 47, 'Santino Conn', '+19132220848', '5911 Marlon Turnpike\nNorth Osbaldoville, MI 21402-9789', 'No, I\'ve made up my mind about it; and while she was to get out of the way--\' \'THAT generally takes some time,\' interrupted the Gryphon. \'How the creatures argue. It\'s enough to look over their.', 'online', 'completed', 'completed', '2024-03-11 17:35:35', '2024-05-24 08:32:54'),
@@ -3511,7 +3528,7 @@ INSERT INTO `orders` (`id`, `customer_id`, `name`, `phone_number`, `address`, `n
 (65, 102, 'sdfsdf', '32432432424', 'werwerewr', NULL, 'online', 'completed', 'refund', '2024-04-16 15:05:11', '2024-05-25 08:22:17'),
 (66, 102, 'sdfsdf', '32432432424', 'werwerewr', NULL, 'online', 'completed', 'confirm', '2024-04-08 10:25:36', '2024-05-24 14:06:41'),
 (67, 102, 'sdfsdf', '32432432424', 'werwerewr', NULL, 'cash', 'initialization', 'confirm', '2024-05-24 16:57:25', '2024-05-25 07:31:07'),
-(68, 218, 'ahdjd', '9938484838', 'hduudud', NULL, 'cash', 'initialization', 'confirm', '2024-05-24 17:00:28', '2024-05-25 07:29:44'),
+(68, 218, 'ahdjd', '9938484838', 'hduudud', NULL, 'cash', 'initialization', 'cancelled', '2024-05-24 17:00:28', '2024-06-08 17:20:49'),
 (69, 102, 'sdfsdf', '32432432424', 'werwerewr', NULL, 'online', 'completed', 'confirm', '2024-05-24 17:02:15', '2024-05-25 08:10:39'),
 (70, 218, 'ahdjd', '9938484838', 'hduudud', NULL, 'online', 'completed', 'confirm', '2024-05-24 17:02:21', '2024-05-25 07:55:32'),
 (76, 102, 'sdfsdf', '32432432424', 'werwerewr', NULL, 'cash', 'initialization', 'confirm', '2024-05-25 02:07:14', '2024-05-25 07:29:39'),
@@ -3536,7 +3553,18 @@ INSERT INTO `orders` (`id`, `customer_id`, `name`, `phone_number`, `address`, `n
 (134, 102, 'dfdsf', '043543545435', 'Gan chua, Bá Hiến, Bình Xuyên, Vĩnh Phúc', NULL, 'online', 'completed', 'completed', '2024-06-03 04:11:40', '2024-06-07 02:51:20'),
 (135, 102, 'dfdsf', '043543545435', 'Gan chua, Bá Hiến, Bình Xuyên, Vĩnh Phúc', NULL, 'online', 'completed', 'completed', '2024-06-03 04:49:02', '2024-06-07 02:51:15'),
 (136, 102, 'dfdsf', '043543545435', 'Gan chua, Bá Hiến, Bình Xuyên, Vĩnh Phúc', NULL, 'online', 'completed', 'completed', '2024-06-05 03:01:54', '2024-06-07 02:36:19'),
-(138, 102, 'dfdsf', '043543545435', 'Gan chua, Bá Hiến, Bình Xuyên, Vĩnh Phúc', NULL, 'online', 'completed', 'completed', '2024-06-07 03:57:29', '2024-06-07 03:58:35');
+(138, 102, 'dfdsf', '043543545435', 'Gan chua, Bá Hiến, Bình Xuyên, Vĩnh Phúc', NULL, 'online', 'completed', 'completed', '2024-06-07 03:57:29', '2024-06-07 03:58:35'),
+(139, 102, 'dfdsf', '043543545435', 'Gan chua, Bá Hiến, Bình Xuyên, Vĩnh Phúc', NULL, 'cash', 'initialization', 'initialization', '2024-06-08 05:04:31', '2024-06-08 05:04:31'),
+(140, 102, 'dfdsf', '043543545435', 'Gan chua, Bá Hiến, Bình Xuyên, Vĩnh Phúc', NULL, 'cash', 'initialization', 'initialization', '2024-06-08 05:04:58', '2024-06-08 05:04:58'),
+(141, 102, 'dfdsf', '043543545435', 'Gan chua, Bá Hiến, Bình Xuyên, Vĩnh Phúc', NULL, 'cash', 'initialization', 'initialization', '2024-06-08 05:45:55', '2024-06-08 05:45:55'),
+(142, 102, 'addsad', '03499999999', 'dsadsad, An Phú, An Phú, An Giang', NULL, 'cash', 'initialization', 'confirm', '2024-06-08 05:47:00', '2024-06-09 00:54:20'),
+(143, 230, 'Nguyen van son', '0342788463', 'Gan chua trai Cup, Bá Hiến, Bình Xuyên, Vĩnh Phúc', NULL, 'cash', 'initialization', 'cancelled', '2024-06-08 07:02:23', '2024-06-08 17:13:02'),
+(144, 230, 'Nguyen van son', '0342788463', 'Gan chua trai Cup, Bá Hiến, Bình Xuyên, Vĩnh Phúc', NULL, 'online', 'completed', 'confirm', '2024-06-08 13:29:00', '2024-06-08 13:29:00'),
+(145, 230, 'Nguyen van son', '0342788463', 'Gan chua trai Cup, Bá Hiến, Bình Xuyên, Vĩnh Phúc', NULL, 'cash', 'initialization', 'cancelled', '2024-06-08 15:40:16', '2024-06-08 17:12:56'),
+(146, 230, 'Nguyen van son', '0342788463', 'Gan chua trai Cup, Bá Hiến, Bình Xuyên, Vĩnh Phúc', NULL, 'online', 'completed', 'completed', '2024-06-08 17:11:59', '2024-06-08 17:25:56'),
+(147, 218, 'ahdjd', '9938484838', 'hduudud', NULL, 'online', 'completed', 'completed', '2024-06-08 17:19:51', '2024-06-08 17:21:08'),
+(148, 230, 'Nguyen van son', '0342788463', 'Gan chua trai Cup, Bá Hiến, Bình Xuyên, Vĩnh Phúc', NULL, 'online', 'completed', 'completed', '2024-06-09 00:50:38', '2024-06-09 00:57:47'),
+(149, 230, 'Nguyen van son', '0342788463', 'Gan chua trai Cup, Bá Hiến, Bình Xuyên, Vĩnh Phúc', NULL, 'cash', 'initialization', 'cancelled', '2024-06-09 00:50:59', '2024-06-09 00:51:07');
 
 -- --------------------------------------------------------
 
@@ -3716,7 +3744,23 @@ INSERT INTO `order_detail` (`id`, `product_id`, `orders_id`, `quantity`, `price`
 (206, 68, 136, 1, 25800.00),
 (207, 39, 136, 1, 21250.00),
 (208, 22, 136, 1, 31980.00),
-(209, 6, 138, 10, 41280.00);
+(209, 6, 138, 10, 41280.00),
+(210, 39, 139, 9, 21250.00),
+(211, 68, 140, 3, 25800.00),
+(212, 6, 140, 3, 41280.00),
+(213, 22, 140, 3, 31980.00),
+(214, 8, 141, 5, 44370.00),
+(215, 68, 142, 1, 25800.00),
+(216, 39, 143, 1, 21250.00),
+(217, 68, 143, 1, 25800.00),
+(218, 68, 144, 1, 25800.00),
+(219, 5, 145, 2, 38880.00),
+(220, 22, 145, 3, 31980.00),
+(221, 39, 145, 1, 21250.00),
+(222, 1, 146, 5, 58290.00),
+(223, 91, 147, 5, 30100.00),
+(224, 39, 148, 26, 21250.00),
+(225, 68, 149, 1, 25800.00);
 
 -- --------------------------------------------------------
 
@@ -3754,7 +3798,7 @@ CREATE TABLE `product` (
 --
 
 INSERT INTO `product` (`id`, `name`, `description`, `ingredient`, `calo`, `quantity`, `price`, `discount`, `created_time`, `updated_time`) VALUES
-(1, 'Cơm tấm sườn miếng', 'Cơm tấm sườn miếng là một món ăn đặc trưng của ẩm thực miền Nam Việt Nam, đặc biệt phổ biến ở Sài Gòn. Món ăn này bao gồm cơm tấm - loại gạo vỡ đặc trưng, được nấu chín mềm, ăn kèm với miếng sườn nướng thơm lừng.\r\nSườn miếng thường là sườn lợn được ướp với hỗn hợp gia vị đậm đà, bao gồm nước mắm, tỏi, hành, đường, và một ít mật ong hoặc nước dừa để tạo độ ngọt tự nhiên. Sườn sau khi ướp được nướng trên than hoa, giúp miếng sườn vừa chín tới, giữ được độ mềm mại, mà vẫn có lớp vỏ ngoài giòn, thơm mùi khói.', 'Cơm Tấm, Sườn Cốt Lết Nướng ăn kèm Dưa Leo, Cà Chua, Đồ Chua, Mỡ Hành chấm Nước Mắm', 248, 22, 67000, 13, '2024-04-20 05:02:39', '2024-05-28 02:06:24'),
+(1, 'Cơm tấm sườn miếng', 'Cơm tấm sườn miếng là một món ăn đặc trưng của ẩm thực miền Nam Việt Nam, đặc biệt phổ biến ở Sài Gòn. Món ăn này bao gồm cơm tấm - loại gạo vỡ đặc trưng, được nấu chín mềm, ăn kèm với miếng sườn nướng thơm lừng.\r\nSườn miếng thường là sườn lợn được ướp với hỗn hợp gia vị đậm đà, bao gồm nước mắm, tỏi, hành, đường, và một ít mật ong hoặc nước dừa để tạo độ ngọt tự nhiên. Sườn sau khi ướp được nướng trên than hoa, giúp miếng sườn vừa chín tới, giữ được độ mềm mại, mà vẫn có lớp vỏ ngoài giòn, thơm mùi khói.', 'Cơm Tấm, Sườn Cốt Lết Nướng ăn kèm Dưa Leo, Cà Chua, Đồ Chua, Mỡ Hành chấm Nước Mắm', 248, 17, 67000, 13, '2024-04-20 05:02:39', '2024-06-08 17:25:48'),
 (2, 'Cơm Tấm Sườn Bì Chả', 'Cơm tấm sườn bì chả là một món ăn đặc trưng của ẩm thực miền Nam Việt Nam, được yêu thích bởi sự đa dạng và phong phú trong hương vị và thành phần. Món ăn này bao gồm cơm tấm - loại gạo tấm vỡ được nấu chín mềm, ăn kèm với sườn nướng, bì và chả.', 'Cơm Tấm, Sườn nướng, Bì, Chả Trứng, Trứng Ốp', 99, 40, 88000, 13, '2024-04-20 05:02:39', '2024-05-28 02:06:24'),
 (3, 'Cơm Gà Hội An', 'Cơm gà Hội An là một món ăn đặc sản nổi tiếng của thành phố Hội An, tỉnh Quảng Nam, Việt Nam. Món ăn này đặc trưng bởi sự kết hợp hài hòa giữa gạo tẻ dẻo thơm, thịt gà ta mềm ngọt và các loại rau sống tươi ngon, tạo nên một hương vị độc đáo và hấp dẫn', 'Cơm, Gà, Rau sống, Nước chấm', 282, 38, 55000, 13, '2024-04-20 05:02:39', '2024-05-28 02:06:24'),
 (4, 'Cơm Gà Chiên Mắm', 'Cơm gà chiên mắm là một món ăn đặc trưng và hấp dẫn của ẩm thực Việt Nam, nổi bật với sự kết hợp giữa cơm trắng dẻo thơm và gà chiên giòn thấm đượm hương vị đậm đà của nước mắm.', 'Gà chiên mắm, Cơm trắng, Rau sống và dưa chua, Nước chấm, Trang trí và gia vị', 463, 37, 48000, 18, '2024-04-20 05:02:39', '2024-05-28 02:06:24'),
@@ -3792,7 +3836,7 @@ INSERT INTO `product` (`id`, `name`, `description`, `ingredient`, `calo`, `quant
 (36, 'Cháo lòng', 'Cháo lòng là một món ăn truyền thống của Việt Nam, có hương vị đậm đà và giàu dinh dưỡng. Món ăn này kết hợp cháo gạo mềm mịn với các loại nội tạng heo như lòng, gan, dạ dày, tạo nên một món ăn hấp dẫn và bổ dưỡng.', 'Gạo, lòng heo (bao gồm lòng, gan, dạ dày), nước dùng (nước xương heo), hành tím, tỏi, nước mắm, muối, tiêu, hành lá, rau mùi.', 411, 26, 25000, 12, '2024-04-20 05:02:39', '2024-05-28 02:06:24'),
 (37, 'Cháo gà', 'Cháo gà là một món ăn truyền thống và dễ tiêu hóa, được nấu từ gạo và thịt gà, mang đến hương vị thơm ngon và bổ dưỡng, phù hợp cho mọi lứa tuổi và đặc biệt thích hợp khi cảm thấy không khỏe.', 'Gạo, thịt gà, nước dùng gà, hành tím, tỏi, nước mắm, muối, tiêu, hành lá, rau mùi, gừng.', 71, 36, 20000, 19, '2024-04-20 05:02:39', '2024-05-28 02:06:24'),
 (38, 'Cháo gà ác', 'Cháo gà ác là một món ăn truyền thống, bổ dưỡng, được chế biến từ gạo và gà ác, loại gà có thịt đen và giá trị dinh dưỡng cao, thường được sử dụng trong y học cổ truyền để bồi bổ sức khỏe.', 'Gạo, gà ác, nước dùng gà, hành tím, tỏi, nước mắm, muối, tiêu, hành lá, rau mùi, gừng, hạt sen.', 72, 36, 35000, 11, '2024-04-20 05:02:39', '2024-05-28 02:06:24'),
-(39, 'Cháo thịt bằm', 'Cháo thịt bằm là một món ăn ngon miệng và dễ tiêu, thường được nấu từ gạo và thịt bằm, tạo nên hương vị đậm đà và bổ dưỡng. Món cháo này rất phù hợp cho bữa sáng hoặc bữa ăn nhẹ.', 'Gạo, thịt heo bằm, nước dùng (nước xương heo hoặc gà), hành tím, tỏi, nước mắm, muối, tiêu, hành lá, rau mùi.', 297, 82, 25000, 15, '2024-04-20 05:02:39', '2024-06-07 03:58:22'),
+(39, 'Cháo thịt bằm', 'Cháo thịt bằm là một món ăn ngon miệng và dễ tiêu, thường được nấu từ gạo và thịt bằm, tạo nên hương vị đậm đà và bổ dưỡng. Món cháo này rất phù hợp cho bữa sáng hoặc bữa ăn nhẹ.', 'Gạo, thịt heo bằm, nước dùng (nước xương heo hoặc gà), hành tím, tỏi, nước mắm, muối, tiêu, hành lá, rau mùi.', 297, 56, 25000, 15, '2024-04-20 05:02:39', '2024-06-09 00:54:27'),
 (40, 'Cháo dinh dưỡng', 'Cháo dinh dưỡng là một món ăn bổ dưỡng và dễ tiêu, thường được nấu từ gạo kết hợp với các loại rau củ và thịt hoặc hải sản, cung cấp đầy đủ các chất dinh dưỡng cần thiết cho cơ thể. Món cháo này rất phù hợp cho trẻ nhỏ, người già, và những người cần phục hồi sức khỏe.', 'Gạo, thịt (gà, heo, bò) hoặc hải sản (tôm, cá), rau củ (cà rốt, khoai tây, bí đỏ, cải bó xôi), nước dùng (nước xương), hành tím, tỏi, nước mắm, muối, tiêu, hành lá, rau mùi.', 196, 48, 30000, 12, '2024-04-20 05:02:39', '2024-05-28 02:06:24'),
 (41, 'Bún chả hà nội', 'Bún chả Hà Nội là một món ăn đặc trưng của ẩm thực Hà Nội, với bún tươi kết hợp cùng chả thịt nướng thơm lừng, nước chấm chua ngọt đậm đà và các loại rau sống tươi ngon. Đây là món ăn mang hương vị độc đáo và khó quên của thủ đô Việt Nam.', 'Bún tươi, thịt heo (thịt ba chỉ và thịt nạc vai), nước mắm, đường, giấm, tỏi, ớt, cà rốt, đu đủ xanh, rau sống (xà lách, húng quế, rau thơm), hành khô, tiêu, muối, dầu ăn.', 51, 8, 35000, 16, '2024-04-20 05:02:39', '2024-05-28 02:06:24'),
 (42, 'Bún đậu mắm tôm', 'Bún đậu mắm tôm là một món ăn dân dã của miền Bắc Việt Nam, nổi bật với bún tươi, đậu phụ chiên giòn, thịt luộc, chả cốm và mắm tôm đặc trưng. Món ăn này thường được thưởng thức cùng các loại rau sống tươi ngon, tạo nên hương vị đậm đà và hấp dẫn.', 'Bún tươi, đậu phụ, thịt heo luộc, chả cốm, mắm tôm, đường, chanh, ớt, tỏi, dầu ăn, rau sống (xà lách, húng quế, kinh giới, tía tô).', 488, 6, 35000, 14, '2024-04-20 05:02:39', '2024-05-28 02:06:24'),
@@ -3822,7 +3866,7 @@ INSERT INTO `product` (`id`, `name`, `description`, `ingredient`, `calo`, `quant
 (68, 'Bún mẹt', 'Bún mẹt là một món ăn đặc sản của miền Bắc Việt Nam, được trình bày đẹp mắt trên mẹt tre lót lá chuối, gồm nhiều thành phần như bún tươi, chả, nem rán, thịt luộc, và các loại rau sống. Món ăn này không chỉ hấp dẫn bởi hương vị mà còn bởi sự đa dạng và phong phú của các nguyên liệu, tạo nên một bữa ăn đầy đủ và ngon miệng.', 'Bún tươi, chả lụa, nem rán, thịt heo luộc, giò tai, dưa leo, rau sống (xà lách, rau thơm, húng quế, kinh giới), hành phi, lạc rang, tỏi, ớt, nước mắm pha, chanh, đường, tiêu, muối.', 153, 130, 30000, 14, '2024-04-20 05:02:39', '2024-06-01 09:35:41'),
 (69, 'Bánh su kem', 'Bánh su kem là một món tráng miệng phổ biến với lớp vỏ bánh mềm mịn và nhân kem mát lạnh, thơm ngon. Vỏ bánh được làm từ bột nhồi choux, nướng vàng giòn, sau đó được bơm đầy kem trứng ngọt ngào hoặc kem sữa béo ngậy, tạo nên một sự kết hợp hoàn hảo giữa hương vị và kết cấu.', 'Bột mì, bơ, nước, sữa, trứng, đường, muối, bột bắp, vani.', 52, 19, 55000, 15, '2024-04-20 05:02:39', '2024-05-28 02:06:24'),
 (76, 'Bánh mì thịt', 'Bánh mì thịt là một món ăn đường phố phổ biến và đặc trưng của Việt Nam. Món ăn này gồm một chiếc bánh mì giòn rụm, được kẹp với các loại thịt như thịt heo nướng, chả lụa, hoặc thịt nguội, kết hợp với các loại rau sống và dưa chua, tạo nên hương vị đậm đà và thơm ngon.', 'Bánh mì, thịt heo nướng hoặc thịt nguội, chả lụa, dưa leo, cà rốt, củ cải trắng, rau ngò, pate, bơ, nước mắm, đường, muối, tiêu, ớt, tỏi.', 117, 33, 15000, 14, '2024-04-20 05:02:39', '2024-05-28 02:06:24'),
-(91, 'Cơm Trộn Bò rau củ quả', 'Cơm trộn bò rau củ quả là một món ăn ngon miệng và bổ dưỡng, kết hợp giữa cơm trắng, thịt bò mềm thơm, và các loại rau củ quả tươi ngon. Món ăn này không chỉ hấp dẫn bởi sự đa dạng của nguyên liệu mà còn bởi hương vị phong phú, cân đối giữa thịt và rau, tạo nên một bữa ăn đầy đủ dinh dưỡng.', 'Cơm trắng, thịt bò, cà rốt, đậu Hà Lan, bông cải xanh, ớt chuông, hành tím, tỏi, nước tương, dầu hào, đường, muối, tiêu, dầu ăn, hành lá, rau mùi.', 381, 5, 35000, 14, '2024-04-20 05:02:39', '2024-05-28 02:06:24');
+(91, 'Cơm Trộn Bò rau củ quả', 'Cơm trộn bò rau củ quả là một món ăn ngon miệng và bổ dưỡng, kết hợp giữa cơm trắng, thịt bò mềm thơm, và các loại rau củ quả tươi ngon. Món ăn này không chỉ hấp dẫn bởi sự đa dạng của nguyên liệu mà còn bởi hương vị phong phú, cân đối giữa thịt và rau, tạo nên một bữa ăn đầy đủ dinh dưỡng.', 'Cơm trắng, thịt bò, cà rốt, đậu Hà Lan, bông cải xanh, ớt chuông, hành tím, tỏi, nước tương, dầu hào, đường, muối, tiêu, dầu ăn, hành lá, rau mùi.', 381, 0, 35000, 14, '2024-04-20 05:02:39', '2024-06-08 17:21:01');
 
 -- --------------------------------------------------------
 
@@ -4905,7 +4949,9 @@ INSERT INTO `review` (`id`, `orders_id`, `customer_id`, `product_id`, `rate`, `c
 (998, 63, 76, 5, 1, 'Et odio aut harum aut sint et quae. Vel voluptate est vero autem rerum. Iure beatae et ad eaque mollitia.', '2024-06-02 15:26:27', '2024-06-02 15:26:27'),
 (999, 16, 220, 37, 2, 'Possimus ut odio perferendis aut nemo. Illo minus vitae nihil atque. Et recusandae voluptatem eaque iusto.', '2024-06-02 15:26:27', '2024-06-02 15:26:27'),
 (1000, 29, 223, 64, 3, 'Non unde possimus eos iusto mollitia provident voluptas. Sunt in repellat commodi nobis iste. Placeat id repellendus quo eum.', '2024-06-02 15:26:27', '2024-06-02 15:26:27'),
-(1001, 138, 102, 6, 5, 'Ngon', '2024-06-07 03:58:48', '2024-06-07 03:58:48');
+(1001, 138, 102, 6, 5, 'Ngon', '2024-06-07 03:58:48', '2024-06-07 03:58:48'),
+(1002, 147, 218, 91, 5, 'sp như cc', '2024-06-08 17:21:21', '2024-06-08 17:21:21'),
+(1003, 148, 230, 39, 5, NULL, '2024-06-09 00:58:02', '2024-06-09 00:58:02');
 
 -- --------------------------------------------------------
 
@@ -4927,6 +4973,16 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
+('5f0coEl20r37pdeta2bIRfaudE2beQBr1sXn7mrW', NULL, '14.0.17.213', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiUkJCc0ZsY202c0FUZGxDNXdwNWlIRUY4YjAxTDlha21pRFFrUGNZWCI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6NDY6Imh0dHBzOi8vdmFuc29uLmlvLnZuL2FkbWluL3B1YmxpYy9jb25maXJtb3JkZXIiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19', 1717892590),
+('DBL7FsSfx6fXrrGY1voA8RqNRwnSVeTKE5TqbkfR', NULL, '116.97.202.92', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiYjlBQjFsUU9oN2VKVFFuNFlZbXJ2TTI5Q0lMTzZaNm5qd3dXdGE1TSI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Mzk6Imh0dHBzOi8vdmFuc29uLmlvLnZuL2FkbWluL3B1YmxpYy9vcmRlciI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1717867546),
+('hl2wrEHgK3UcaCkzWyBCzzOB2qLapr37EogBOnaB', NULL, '116.97.202.92', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoicUp3R2c0TVBHbHdraDBxaTl5TjZQZ2hyM2lZYlZtTk45VFE4WWw1bCI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Mzk6Imh0dHBzOi8vdmFuc29uLmlvLnZuL2FkbWluL3B1YmxpYy9vcmRlciI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1717836454),
+('JsdzW85UnLJC3sgesJoWev5Mcx5ZSPryX8QT801E', NULL, '116.97.202.92', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoidnhZdERZVG5vVkhBQ0VtR1pyUDAwSEZUNlVjbzUxZ2I4Q1Y5ZUdKaSI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MzM6Imh0dHBzOi8vdmFuc29uLmlvLnZuL2FkbWluL3B1YmxpYyI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1717822448),
+('mAVkFEVbnmUMvJJ2Swqke3nzAWgS1GGyYWnyYe8A', NULL, '116.97.202.92', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiODdwdnVXNTJDOTBjbzU5aGFXUWV5V1NheXNpeWx4ZWxIanNMS01OUyI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6NDI6Imh0dHBzOi8vdmFuc29uLmlvLnZuL2FkbWluL3B1YmxpYy9jdXN0b21lciI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1717823935),
+('MJ7u9CQr55A0McON8gHRLXRar6XpNyiL2RC131qT', NULL, '116.97.202.92', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiNUZWQThaSEU1ZTJOTzVpUThQNkxqRmx5Z1o1aGxuZGhESnhyUTJzZCI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6NDg6Imh0dHBzOi8vdmFuc29uLmlvLnZuL2FkbWluL3B1YmxpYy9jaGF0ZGV0YWlsLzIzMCI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1717853096),
+('OSSKCllwnwCSEVaYJhO9D3gwGPMnSeW8WRKYl4NV', NULL, '116.97.202.92', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoibEtqWVRTUmVIRkh2UWd6U0FqejRldTlnaXQyREdLZHk3MHBjQmU3RyI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MzM6Imh0dHBzOi8vdmFuc29uLmlvLnZuL2FkbWluL3B1YmxpYyI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1717832396),
+('SMf4OkOw6ZqJGOnVohterz5HCsNasA1dOZCubnC0', NULL, '14.0.17.213', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoibW5wTG8ydDJYR0xXeTNOeTJySHA5bm1WN0FtWThwR1dNa3FIYlg3VCI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6NDY6Imh0dHBzOi8vdmFuc29uLmlvLnZuL2FkbWluL3B1YmxpYy9jb25maXJtb3JkZXIiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19', 1717892589),
+('SVYySFdQg7EOxZPyVPNhM4wQcK6HhK5Tkbjl6pr2', NULL, '14.0.17.211', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiekxQOWZxdUp6QW1RZnBmdnJMNkRpbmF6aTFiVG1tdUNyem0yNzJ3NiI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6NDI6Imh0dHBzOi8vdmFuc29uLmlvLnZuL2FkbWluL3B1YmxpYy9jdXN0b21lciI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1717894626),
+('tsgg6eNDWUoSvfTFPWodu4blh9d4GlEjj6KK5eJz', NULL, '116.97.202.92', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiWlBWT3M4Z2hWNUpIRWNZODBLVHFsMmdXSjA3M0E1ZXRhRElTdUlYRyI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6NDY6Imh0dHBzOi8vdmFuc29uLmlvLnZuL2FkbWluL3B1YmxpYy9jb25maXJtb3JkZXIiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19', 1717846524),
 ('z1B3GstwFbnLk25rdyfNZ6OEHPylB9T9grqMbklm', NULL, '171.228.150.162', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiM3lvYTJxdEJOdXFjcXl0ZXNQZXcxcTBaNXpPRllEZDRBRHlBeUE5VCI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6NDg6Imh0dHBzOi8vdmFuc29uLmlvLnZuL2FkbWluL3B1YmxpYy9jaGF0ZGV0YWlsLzEwMiI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1717737455);
 
 -- --------------------------------------------------------
@@ -5121,13 +5177,13 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT cho bảng `banner`
 --
 ALTER TABLE `banner`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT cho bảng `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=365;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=382;
 
 --
 -- AUTO_INCREMENT cho bảng `category`
@@ -5139,7 +5195,7 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT cho bảng `customer`
 --
 ALTER TABLE `customer`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=230;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=231;
 
 --
 -- AUTO_INCREMENT cho bảng `failed_jobs`
@@ -5151,7 +5207,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT cho bảng `favorite`
 --
 ALTER TABLE `favorite`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT cho bảng `image`
@@ -5169,13 +5225,13 @@ ALTER TABLE `jobs`
 -- AUTO_INCREMENT cho bảng `location`
 --
 ALTER TABLE `location`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=327;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=330;
 
 --
 -- AUTO_INCREMENT cho bảng `messages`
 --
 ALTER TABLE `messages`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2231;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2242;
 
 --
 -- AUTO_INCREMENT cho bảng `migrations`
@@ -5187,13 +5243,13 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT cho bảng `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=139;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=150;
 
 --
 -- AUTO_INCREMENT cho bảng `order_detail`
 --
 ALTER TABLE `order_detail`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=210;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=226;
 
 --
 -- AUTO_INCREMENT cho bảng `product`
@@ -5211,7 +5267,7 @@ ALTER TABLE `product_category`
 -- AUTO_INCREMENT cho bảng `review`
 --
 ALTER TABLE `review`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1002;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1004;
 
 --
 -- AUTO_INCREMENT cho bảng `users`

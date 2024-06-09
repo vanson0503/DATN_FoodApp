@@ -280,34 +280,40 @@ fun CheckoutFormCartScreen(
                 // Buy Now Button
                 Button(
                     onClick = {
-//                        for()
+                        orderViewModel.checkCart(customerId = customerId){bool,message->
+                            if(bool){
+                                if(selectedPaymentMethod.value=="Tiền mặt"){
+                                    orderViewModel.addToOderFromCart(
+                                        locationId = locationId.intValue,
+                                        customerId = customerId,
+                                        payment = if(selectedPaymentMethod.value=="Tiền mặt") "cash" else "online",
+                                        onResult = {result,message->
+                                            if(result){
+                                                showToast.value = true
+                                                orderSuccess = true
+                                            }else{
+                                                Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
+                                            }
+                                        })
+                                }
+                                else{
+                                    fetchPaymentInfo(totalAmount.toInt())
+                                    val currentConfig = customerConfig
+                                    val currentClientSecret = paymentIntentClientSecret
 
-                        if(selectedPaymentMethod.value=="Tiền mặt"){
-                            orderViewModel.addToOderFromCart(
-                                locationId = locationId.intValue,
-                                customerId = customerId,
-                                payment = if(selectedPaymentMethod.value=="Tiền mặt") "cash" else "online",
-                                onResult = {result,message->
-                                    if(result){
-                                        showToast.value = true
-                                        orderSuccess = true
-                                    }else{
-                                        Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
+                                    if (currentConfig != null && currentClientSecret != null) {
+                                        presentPaymentSheet(paymentSheet, currentConfig, currentClientSecret)
+                                    } else {
+                                        Toast.makeText(context, "Đang khởi tạo dịch vụ!", Toast.LENGTH_SHORT).show()
+                                        print("Config or Client Secret is null")
                                     }
-                                })
-                        }
-                        else{
-                            fetchPaymentInfo(totalAmount.toInt())
-                            val currentConfig = customerConfig
-                            val currentClientSecret = paymentIntentClientSecret
-
-                            if (currentConfig != null && currentClientSecret != null) {
-                                presentPaymentSheet(paymentSheet, currentConfig, currentClientSecret)
-                            } else {
-                                Toast.makeText(context, "Đang khởi tạo dịch vụ!", Toast.LENGTH_SHORT).show()
-                                print("Config or Client Secret is null")
+                                }
+                            }
+                            else{
+                                Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
                             }
                         }
+
 
                     },
                     modifier = Modifier

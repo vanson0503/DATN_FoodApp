@@ -148,8 +148,8 @@
             tr.innerHTML = `
             <td><strong>${item.product.name}</strong></td>
             <td>${item.quantity}</td>
-            <td>$${item.price}</td>
-            <td>$${(parseFloat(item.price) * item.quantity).toFixed(2)}</td>
+            <td>${formatVND(parseInt(item.price))}</td>
+            <td>${formatVND(parseFloat(item.price) * item.quantity)}</td>
         `;
             productList.appendChild(tr);
         });

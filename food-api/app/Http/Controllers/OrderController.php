@@ -194,17 +194,17 @@ class OrderController extends Controller
     }
 
 
-    public function checkCartQuantities(Request $request)
+    public function checkCartQuantities($customerId)
     {
         
-        $customerId = $request->input('customer_id');
         // Fetch cart items for the customer
         $cartItems = Cart::where('customer_id', $customerId)->get();
+        
     
         // Check each item in the cart
         foreach ($cartItems as $item) {
             $product = Product::findOrFail($item->product_id);
-    
+            
             // Check if product stock is less than cart quantity
             if ($product->quantity < $item->quantity) {
                 return response()->json([
@@ -214,7 +214,7 @@ class OrderController extends Controller
         }
     
         // All items have sufficient stock
-        return null;
+        return response()->json(['message' => 'Done!kkk'], 200);
     }
 
 

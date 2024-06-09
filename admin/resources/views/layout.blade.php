@@ -20,6 +20,10 @@
   const BASE_API_URL = "https://vanson.io.vn/food-api/public/api/"
 </script>
 <script>
+    function formatVND(number) {
+        return number.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' });
+    }
+
   // Hàm kiểm tra session ID
   function checkSession() {
     // Giả sử session ID được lưu trong localStorage

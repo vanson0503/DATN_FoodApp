@@ -8,6 +8,7 @@ import retrofit2.http.FormUrlEncoded
 import retrofit2.http.GET
 import retrofit2.http.POST
 import retrofit2.http.Path
+import retrofit2.http.Query
 
 interface OrderApiService {
 
@@ -33,4 +34,7 @@ interface OrderApiService {
         @Field("id") id: Int,
         @Field("status") status:String,
     ):Response< ResponseMessage>
+
+    @GET("checkcart/{customer_id}")
+    suspend fun checkCart(@Path("customer_id") customerId: Int):Response< ResponseMessage>
 }

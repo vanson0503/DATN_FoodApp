@@ -165,53 +165,61 @@ fun CartScreen(
             }
         }
     ) {paddingValues->
-        Column(Modifier.padding(paddingValues)) {
-            LazyColumn(
-                Modifier.padding(horizontal = 10.dp)
-            ) {
-                items(carts!!, key = { it.id }) { product ->
-                    SwipeToDeleteContainer(
-                        item = product,
-                        onDelete = {
-                            cartViewModel.removeFromCart(
-                                product.id,
-                                customerId,
-                                onResult = { result ->
-                                    if (result) {
-                                        cartViewModel.getCartByCustomerId(customerId)
-                                    } else {
-                                        Toast.makeText(context, "Có lỗi xảy ra", Toast.LENGTH_SHORT).show()
-                                    }
-                                }
-                            )
-                        }
-                    ) { item ->
-                        CartItemContent(
-                            item,
-                            onQuantityChanged = { quantity ->
-                                cartViewModel.updateCartItemQuantity(
-                                    productId = item.id,
-                                    customerId = customerId,
-                                    quantity = quantity,
-                                    add = false,
+        if (carts!!.isEmpty()) {
+            Column(modifier = Modifier.fillMaxSize(), verticalArrangement = Arrangement.Center, horizontalAlignment = Alignment.CenterHorizontally) {
+
+                Text("Chưa có sản phẩm nào")
+            }
+        }else{
+            Column(Modifier.padding(paddingValues)) {
+                LazyColumn(
+                    Modifier.padding(horizontal = 10.dp)
+                ) {
+                    items(carts!!, key = { it.id }) { product ->
+                        SwipeToDeleteContainer(
+                            item = product,
+                            onDelete = {
+                                cartViewModel.removeFromCart(
+                                    product.id,
+                                    customerId,
                                     onResult = { result ->
                                         if (result) {
                                             cartViewModel.getCartByCustomerId(customerId)
+                                        } else {
+                                            Toast.makeText(context, "Có lỗi xảy ra", Toast.LENGTH_SHORT).show()
                                         }
                                     }
                                 )
-                            },
-                            onClickProduct = { id ->
-                                onClickProduct(id)
                             }
-                        )
+                        ) { item ->
+                            CartItemContent(
+                                item,
+                                onQuantityChanged = { quantity ->
+                                    cartViewModel.updateCartItemQuantity(
+                                        productId = item.id,
+                                        customerId = customerId,
+                                        quantity = quantity,
+                                        add = false,
+                                        onResult = { result ->
+                                            if (result) {
+                                                cartViewModel.getCartByCustomerId(customerId)
+                                            }
+                                        }
+                                    )
+                                },
+                                onClickProduct = { id ->
+                                    onClickProduct(id)
+                                }
+                            )
+                        }
                     }
                 }
+
+
+
             }
-
-
-
         }
+
     }
 }
 

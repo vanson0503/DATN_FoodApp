@@ -313,7 +313,7 @@ fun MainApp(
                         },
                         onProductClick = {
                             navController.navigate("productDetail/$it"){
-                                //popUpTo("productDetail/{id}") { inclusive = true }
+                                popUpTo("productDetail/{id}") { inclusive = true }
                             }
                         }
                     )
@@ -345,7 +345,9 @@ fun MainApp(
                                 navController.popBackStack()
                             },
                             onCartClicked = {
-                                navController.navigate("cart")
+                                navController.navigate("cart"){
+                                    popUpTo("productDetail/{id}") { inclusive = true }
+                                }
                             },
                             onClickProduct = { productId ->
                                 navController.navigate("productDetail/$productId") {
@@ -354,7 +356,7 @@ fun MainApp(
                             },
                             viewAllReviewByProductId = { productId ->
                                 navController.navigate("reviewsByProduct/$productId"){
-                                    popUpTo("productDetail/{id}") { inclusive = true }
+//                                    popUpTo("productDetail/{id}") { inclusive = true }
                                 }
                             }
                         )
